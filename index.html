@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="same-origin">
+<title>Penocchio Research Group | Theoretical chemistry out of equilibrium, JGU Mainz</title>
+<meta name="description" content="We are a theoretical chemistry group at Johannes Gutenberg University Mainz. We look for the design rules of molecular machines, functional reaction networks and electrically driven chemistry far from equilibrium.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#2f6a61">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Penocchio Research Group, JGU Mainz">
+<meta property="og:description" content="Designing chemistry that runs on energy: methods and models for nonequilibrium chemistry.">
+<meta property="og:image" content="https://penocchio-group.github.io/assets/img/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/css/style.css?v=2026-10-26c">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero home-hero">
+  <div class="wrap nav-wrap">
+    <nav class="nav" id="nav" aria-label="Main">
+      <a class="brand" href="index.html" aria-label="Penocchio Research Group, home">
+        <svg class="brand-mark" viewBox="0 0 30 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M1 18 L11 3 V18 L21 3 V18 L29 6"/></svg>
+        <span class="brand-text"><b>Penocchio</b><span>Research Group · JGU Mainz</span></span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <div class="dd" data-section="research">
+          <a class="dd-top" href="research.html">Research</a>
+          <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-research" aria-label="More in Research">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+          </button>
+          <div class="dd-menu" id="dd-research">
+            <div class="dd-menu-inner">
+              <a href="research.html">Research themes<small>The questions we work on</small></a>
+              <a href="publications.html">Publications<small>Searchable list of papers</small></a>
+              <a href="stored-free-energy.html">Stored free energy<small>Papers that report it, and how to compute it</small></a>
+            </div>
+          </div>
+        </div>
+        <div class="dd" data-section="people">
+          <a class="dd-top" href="people.html">People</a>
+          <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-people" aria-label="More in People">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+          </button>
+          <div class="dd-menu" id="dd-people">
+            <div class="dd-menu-inner">
+              <a href="emanuele.html">Meet Emanuele<small>Group leader: bio, awards, talks</small></a>
+              <a href="people.html">Team<small>Members and mentees</small></a>
+              <a href="collaborators.html">Collaborators<small>Who we work with</small></a>
+            </div>
+          </div>
+        </div>
+        <a href="culture.html">Group culture</a>
+        <a href="resources.html">Resources</a>
+        <a href="news.html">News</a>
+      </div>
+      <a class="nav-contact" href="contact.html">Contact</a>
+      <a class="btn-opps" href="opportunities.html">Opportunities</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg class="i-open" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        <svg class="i-close" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>
+      </button>
+    </nav>
+  </div>
+
+  <div class="art">
+    <img class="hero-art" src="assets/img/arnath-filled.png?v=4" alt="Arnath, the irreversibility demon: a hand-drawn bird holding padlocks, saying ΔS − Q/T ≥ 0" width="1100" height="1100">
+    <button type="button" class="hotspot" id="arnath-btn" aria-expanded="false" aria-controls="arnath">
+      <span class="pulse" aria-hidden="true"></span>Who’s this?
+    </button>
+    <div class="bubble" id="arnath" role="dialog" aria-modal="false" aria-labelledby="arnath-name" hidden>
+      <svg class="tail" width="44" height="34" viewBox="0 0 44 34" aria-hidden="true">
+        <path d="M4 34 C12 24 20 12 26 2 C27 13 30 24 40 34 Z" fill="#fbf8f0"/>
+        <path d="M4 32 C12 23 20 12 26 2 C27 13 30 23 39 32" fill="none" stroke="#161615" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <button type="button" class="close" id="arnath-close" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4.5l10 9.5M14 4L4.5 14"/></svg>
+      </button>
+      <div class="bubble-head">
+        <span class="name" id="arnath-name">Arnath</span>
+        <span class="bubble-role">THE IRREVERSIBILITY DEMON · Σ ≥ 0</span>
+      </div>
+      <svg width="120" height="8" viewBox="0 0 120 8" aria-hidden="true"><path d="M2 5 C20 2 34 7 52 4 S86 2 118 5" fill="none" stroke="#e0913f" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <blockquote>Meet Arnath, the demon of irreversibility. Unlike the more famous Maxwell’s demon, Arnath loves locking doors that will never reopen. The result is Σ, the entropy produced by every real process, which is never undone (on average). Arnath helps us stay alive and the systems we study functional and interesting!</blockquote>
+      <p class="credit">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15l2-5 8-8 3 3-8 8-5 2z"/><path d="M11 4l3 3"/></svg>
+        Portrait: a gift from the cartoonist Zerocalcare
+      </p>
+    </div>
+  </div>
+
+  <div class="wrap hero-wrap">
+    <div class="hero-body">
+      <a class="hiring" href="opportunities.html"><span class="tag">Join us</span>PhD and postdoc positions in Mainz</a>
+      <p class="hero-kicker">Methods and models for nonequilibrium chemistry</p>
+      <h1>Designing chemistry that runs on energy</h1>
+      <p class="hero-sub">We are a theoretical chemistry group at Johannes Gutenberg University Mainz. With pen-and-paper theory, simulations and a little electrochemistry, we look for design rules for molecular systems that harvest energy and do work far from equilibrium.</p>
+      <div class="ctas">
+        <a class="btn btn-solid" href="research.html">Explore our research</a>
+        <a class="btn btn-outline" href="emanuele.html">Meet Emanuele</a>
+      </div>
+      <p class="hero-meta">Led by Jun.-Prof. Dr. Emanuele Penocchio, Wübben Foundation Professor.</p>
+    </div>
+  </div>
+  <a class="jgu-hero" href="https://www.uni-mainz.de/" target="_blank" rel="noopener" aria-label="Johannes Gutenberg University Mainz (opens in a new tab)"><img src="assets/img/jgu.svg" alt="Johannes Gutenberg Universität Mainz" width="180" height="40"></a>
+  <div class="teeth"></div>
+</header>
+
+<main id="main">
+
+<section id="research">
+  <div class="wrap">
+    <div class="research-head">
+      <div class="stack">
+        <span class="eyebrow">01 – Research</span>
+        <h2 class="h2">Three questions drive our lab</h2>
+      </div>
+      <div class="stack"><p class="intro">Living cells run on molecular machines that burn fuel to move, build and sort. Chemists can now make simple artificial ones, but designing them is still mostly trial and error, because chemistry’s theoretical toolbox was built for systems at equilibrium. We build the theory and simulations to design them.</p>
+      <a class="textlink" href="research.html#ratchet-demo">Try it: watch random motion turn into directed motion <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+    </div>
+
+    <div class="cards">
+      <a class="card" href="research.html#networks">
+        <div class="card-top">
+          <svg width="84" height="84" viewBox="0 0 84 84" fill="none" stroke="#161615" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M42 8v68" stroke-dasharray="3 5"/>
+            <path d="M22 32v23"/><path d="M18 51l4 5 4-5"/><path d="M28 62h27"/><path d="M51 58l5 4-5 4"/>
+            <path d="M62 56V33"/><path d="M58 37l4-5 4 5"/><path d="M56 26H29"/><path d="M33 22l-5 4 5 4"/>
+            <circle cx="22" cy="26" r="5" fill="#fff"/><circle cx="62" cy="26" r="5" fill="#fff"/><circle cx="62" cy="62" r="5" fill="#fff"/><circle cx="22" cy="62" r="5" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="rule"></div>
+        <h3>How does a network’s structure decide what it can do?</h3>
+        <p>Kept away from equilibrium, networks of reactions can pump molecules uphill, pick out the right partner and keep time, as they do in living cells. We work out which network structures give which function, and what each function costs in energy.</p>
+        <span class="cta">Functional reaction networks <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="card" href="research.html#motors">
+        <div class="card-top">
+          <svg width="84" height="84" viewBox="0 0 84 84" fill="none" stroke="#161615" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="38" cy="46" r="19"/>
+            <circle cx="38" cy="27" r="4.5" fill="#fff"/><circle cx="56" cy="40" r="4.5" fill="#fff"/><circle cx="50" cy="61" r="4.5" fill="#fff"/><circle cx="25" cy="60" r="4.5" fill="#fff"/><circle cx="20" cy="40" r="4.5" fill="#fff"/>
+            <ellipse cx="57" cy="53" rx="8" ry="13" transform="rotate(-35 57 53)"/>
+            <path d="M18 18a30 30 0 0 1 40-2"/><path d="M53 11l5 5-6 3"/>
+          </svg>
+        </div>
+        <div class="rule"></div>
+        <h3>Can we design a molecular motor before anyone makes it?</h3>
+        <p>Biological motors turn fuel into motion and motion back into fuel; no artificial motor can do this yet. We simulate motors bead by bead to find the design rules for machines that truly transduce energy.</p>
+        <span class="cta">Molecular machines by design <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="card" href="research.html#electrochemistry">
+        <div class="card-top">
+          <svg width="84" height="84" viewBox="0 0 84 84" fill="none" stroke="#161615" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 44h68" stroke-dasharray="3 5"/>
+            <path d="M8 60C12 60 13 26 18 26L22 60C27 60 28 26 33 26L37 60C42 60 43 26 48 26L52 60C57 60 58 26 63 26L67 60"/>
+            <path d="M44 6l-6 11h8l-6 11"/>
+          </svg>
+        </div>
+        <div class="rule"></div>
+        <h3>What is the best way to drive chemistry with electricity?</h3>
+        <p>Rapidly switching electrode polarity unlocks new reactions, but the waveforms in use are simple and symmetric. We combine reaction-network theory, simulations and experiments to design them from first principles.</p>
+        <span class="cta">Programmable electrochemistry <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="alt">
+  <div class="wrap split">
+    <div class="left stack">
+      <span class="eyebrow">02 – Publications</span>
+      <h2 class="h2">Selected papers</h2>
+      <div class="pub-links">
+        <a class="textlink" href="publications.html">All publications <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="textlink" href="https://scholar.google.com/citations?user=w0buCtcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a class="textlink" href="https://orcid.org/0000-0002-1974-1613" target="_blank" rel="noopener">ORCID ↗</a>
+      </div>
+    </div>
+    <ol class="right pubs" id="featured-pubs">
+      <li><span class="y"></span><div><a class="t" href="publications.html">See the full publication list</a></div><span></span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="news" class="news">
+  <div class="wrap split">
+    <div class="left stack">
+      <span class="eyebrow">03 – News</span>
+      <h2 class="h2">Latest updates</h2>
+      <p class="lead">Papers, prizes, talks and life in the group.</p>
+      <a class="textlink" href="news.html">All news <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div class="right newslist" data-news="4">
+      <a class="newsrow" href="news.html"><span class="nicon"></span><div><span class="txt">Read the latest news</span></div><time></time></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div class="c1">
+        <a class="brand" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 30 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M1 18 L11 3 V18 L21 3 V18 L29 6"/></svg>
+          <span class="brand-text"><b>Penocchio</b><span>Research Group</span></span>
+        </a>
+        <address>Department of Chemistry<br>Johannes Gutenberg University Mainz<br>Duesbergweg 10–14<br>55128 Mainz, Germany</address>
+      </div>
+      <div class="c2">
+        <span class="lbl">Contact</span>
+        <a href="mailto:emanuele.penocchio@uni-mainz.de">emanuele.penocchio@uni-mainz.de</a>
+        <a href="contact.html">How to reach us</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="lab.html">Lab area (members)</a>
+      </div>
+      <div class="c3">
+        <span class="lbl">Follow</span>
+        <a href="https://scholar.google.com/citations?user=w0buCtcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a href="https://orcid.org/0000-0002-1974-1613" target="_blank" rel="noopener">ORCID ↗</a>
+        <a href="https://github.com/emanuelepenocchio" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="c4"><a href="https://www.uni-mainz.de/" target="_blank" rel="noopener" aria-label="Johannes Gutenberg University Mainz (opens in a new tab)"><img class="jgu-foot" src="assets/img/jgu.svg" alt="Johannes Gutenberg Universität Mainz" width="150" height="33"></a></div>
+    </div>
+    <div class="funding">
+      <span>Funded by</span>
+      <span class="wsw"><span class="wsw-word">Wübben Stiftung Wissenschaft</span></span>
+      <span>and Johannes Gutenberg University Mainz</span>
+    </div>
+    <div class="legal">
+      <span>© 2026 Penocchio Research Group · Design by Beatrice Vivaldi</span>
+      <a href="impressum.html">Impressum</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="accessibility.html">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<script src="data/news.js?v=2026-10-26c" defer></script>
+<script src="data/publications.js?v=2026-10-26c" defer></script>
+<script src="assets/js/main.js?v=2026-10-26c" defer></script>
+</body>
+</html>

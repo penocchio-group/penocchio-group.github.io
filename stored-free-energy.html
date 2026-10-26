@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="same-origin">
+<title>Stored free energy | Penocchio Research Group, JGU Mainz</title>
+<meta name="description" content="A list of papers that quantify the free energy stored in chemical systems driven away from equilibrium by fuels, light or electricity, with a short guide and calculator.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#2f6a61">
+<meta property="og:title" content="Stored free energy | Penocchio Research Group">
+<meta property="og:description" content="A list of papers that quantify the free energy stored in chemical systems driven away from equilibrium, and how to compute it.">
+<meta property="og:image" content="https://penocchio-group.github.io/assets/img/og-card.png">
+<link rel="stylesheet" href="assets/css/style.css?v=2026-10-26c">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero page-hero has-figure">
+  <div class="wrap nav-wrap">
+    <nav class="nav" id="nav" aria-label="Main">
+      <a class="brand" href="index.html" aria-label="Penocchio Research Group, home">
+        <svg class="brand-mark" viewBox="0 0 30 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M1 18 L11 3 V18 L21 3 V18 L29 6"/></svg>
+        <span class="brand-text"><b>Penocchio</b><span>Research Group · JGU Mainz</span></span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <div class="dd" data-section="research">
+          <a class="dd-top" href="research.html">Research</a>
+          <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-research" aria-label="More in Research">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+          </button>
+          <div class="dd-menu" id="dd-research">
+            <div class="dd-menu-inner">
+              <a href="research.html">Research themes<small>The questions we work on</small></a>
+              <a href="publications.html">Publications<small>Searchable list of papers</small></a>
+              <a href="stored-free-energy.html">Stored free energy<small>Papers that report it, and how to compute it</small></a>
+            </div>
+          </div>
+        </div>
+        <div class="dd" data-section="people">
+          <a class="dd-top" href="people.html">People</a>
+          <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-people" aria-label="More in People">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+          </button>
+          <div class="dd-menu" id="dd-people">
+            <div class="dd-menu-inner">
+              <a href="emanuele.html">Meet Emanuele<small>Group leader: bio, awards, talks</small></a>
+              <a href="people.html">Team<small>Members and mentees</small></a>
+              <a href="collaborators.html">Collaborators<small>Who we work with</small></a>
+            </div>
+          </div>
+        </div>
+        <a href="culture.html">Group culture</a>
+        <a href="resources.html">Resources</a>
+        <a href="news.html">News</a>
+      </div>
+      <a class="nav-contact" href="contact.html">Contact</a>
+      <a class="btn-opps" href="opportunities.html">Opportunities</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg class="i-open" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        <svg class="i-close" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>
+      </button>
+    </nav>
+  </div>
+  <div class="wrap">
+    <div class="page-head">
+      <div>
+        <p class="crumbs"><a href="research.html">Research</a><span aria-hidden="true">/</span><span>Stored free energy</span></p>
+        <h1>How far from equilibrium?</h1>
+        <p class="page-lead">Fuels, light and electricity can hold chemical systems away from equilibrium, and a system held there stores free energy. This page collects papers that have put a number on it, and explains how to compute it from concentrations.</p>
+        <div class="ctas">
+          <a class="btn btn-solid" href="#papers">See the papers</a>
+          <a class="btn btn-outline" href="#compute">How to compute it</a>
+        </div>
+      </div>
+      <div class="hero-figure" aria-hidden="true">
+        <svg viewBox="0 0 420 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M30 40Q210 330 390 40" stroke="#fff" stroke-width="2.5"/>
+          <path d="M102 133H410M210 185H410" stroke="#8fc4b9" stroke-width="1.5" stroke-dasharray="3 6"/>
+          <path d="M404 139V179" stroke="#e0913f" stroke-width="2.5"/>
+          <path d="M398 145l6-7 6 7M398 173l6 7 6-7" stroke="#e0913f" stroke-width="2.5"/>
+          <path d="M170 44C150 70 132 96 114 120" stroke="#8fc4b9" stroke-width="2.5"/>
+          <path d="M112 109l1 12 11-4" stroke="#8fc4b9" stroke-width="2.5"/>
+          <circle cx="210" cy="185" r="6" fill="#8fc4b9" stroke="none"/>
+          <circle cx="102" cy="133" r="9" fill="#e0913f" stroke="none"/>
+          <g font-family="Space Grotesk, system-ui, sans-serif" font-size="14" stroke="none">
+            <text x="176" y="40" fill="#c6e5dd">fuel, light or electricity</text>
+            <text x="210" y="212" fill="#fff" text-anchor="middle">equilibrium</text>
+            <text x="94" y="162" fill="#fff" text-anchor="end">driven state</text>
+            <text x="390" y="156" fill="#fbead3" text-anchor="end">stored</text>
+            <text x="390" y="173" fill="#fbead3" text-anchor="end">free energy</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="teeth"></div>
+</header>
+
+<main id="main">
+
+<section>
+  <div class="wrap split">
+    <div class="left stack sticky">
+      <h2 class="h2">What it measures</h2>
+      <p class="lead">Molecular pumps, ratchets, ratchet-driven syntheses and kinetically trapped products are built from very different chemistry. The free energy they store is one way to describe them in the same terms.</p>
+    </div>
+    <div class="right prose">
+      <p>A system that is kept away from equilibrium holds free energy that it would lose if it were left alone. This <strong>stored free energy</strong> is a useful number for describing a nonequilibrium state. It measures how far the system is from equilibrium. At constant temperature and pressure it is the most non-expansion work (chemical or electrical, for example) that could be extracted as the system returns to its reference equilibrium, and the least work needed to create the state from that equilibrium; keeping a state steady, as under continuous irradiation, costs additional, continuous dissipation.</p>
+      <p>For reactions in dilute solution it depends only on the temperature and on the concentrations in the driven state and at equilibrium. These usually come from the same NMR, UV–vis or HPLC data used to follow the chemistry; when an equilibrium concentration is too small to measure, as for a high-energy photoisomer, it is obtained from an equilibrium constant or a computed free-energy difference.</p>
+      <p>Energetic quantities like this one complement the kinetic descriptions, such as ratcheting constants, that are more often used for molecular machines, as we argued in a tutorial review written with Giulio Ragazzon and co-workers (<a href="https://doi.org/10.1002/anie.202309501" target="_blank" rel="noopener">Sangchai et al. 2023</a>). The review also points out that counting only the energy that a ratchet’s own components exchange with the fuel or the light allows “more meaningful comparisons between ratchet systems powered by different energy sources or operated in different conditions”.</p>
+      <p>The expression itself has a long history in physical chemistry and stochastic thermodynamics (<a href="#roots">see below</a>). In the past few years several experimental groups have reported it for their own systems, some of them in collaboration with us. This page lists those papers and explains how to compute the quantity.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sfe alt" id="papers">
+  <div class="wrap">
+    <div class="research-head">
+      <h2 class="h2">Papers that report it</h2>
+      <p class="intro">Experimental studies that report how much free energy a chemical system stores away from equilibrium, computed from concentrations. Each entry gives the value in the units the authors used, with the conditions that matter; where we add a conversion, we say so.</p>
+    </div>
+    <div class="pub-tools">
+      <div class="filters" id="sfe-filters" role="group" aria-label="Filter by how the system is driven"></div>
+      <p class="result-count"><span id="sfe-count" aria-live="polite"></span> · newest first</p>
+    </div>
+    <ol class="pubs" id="sfe-list">
+      <noscript><li>The list needs JavaScript to display.</li></noscript>
+    </ol>
+    <p class="criteria"><b>What is listed.</b> Papers that report a value for the free energy stored by an experimental system, computed from concentrations. Papers co-authored by Emanuele are marked. Many studies describe driven systems with other quantities, such as ratcheting constants or reaction Gibbs energies; these answer different questions and are left out only for that reason. The list is not a ranking: values depend on concentration and on the chosen reference equilibrium.</p>
+  </div>
+</section>
+
+<section id="compute">
+  <div class="wrap">
+    <div class="research-head">
+      <h2 class="h2">Computing it</h2>
+      <p class="intro">You need three things: the concentrations in the driven state, the concentrations at the reference equilibrium, and the temperature.</p>
+    </div>
+    <div class="eq">
+      <div class="eq-math">
+        <span class="eq-label">Stored free energy per unit volume, ideal dilute solution</span>
+        <math display="block">
+          <mrow>
+            <mi>G</mi><mo>−</mo><msub><mi>G</mi><mtext>eq</mtext></msub>
+            <mo>=</mo>
+            <mi>R</mi><mi>T</mi>
+            <munder><mo movablelimits="false">∑</mo><mi mathvariant="normal">X</mi></munder>
+            <mrow>
+              <mo>(</mo>
+              <mrow><mo stretchy="false">[</mo><mi mathvariant="normal">X</mi><mo stretchy="false">]</mo></mrow>
+              <mi>ln</mi><mo>&#x2061;</mo>
+              <mfrac>
+                <mrow><mo stretchy="false">[</mo><mi mathvariant="normal">X</mi><mo stretchy="false">]</mo></mrow>
+                <msub><mrow><mo stretchy="false">[</mo><mi mathvariant="normal">X</mi><mo stretchy="false">]</mo></mrow><mtext>eq</mtext></msub>
+              </mfrac>
+              <mo>−</mo>
+              <mrow><mo stretchy="false">[</mo><mi mathvariant="normal">X</mi><mo stretchy="false">]</mo></mrow>
+              <mo>+</mo>
+              <msub><mrow><mo stretchy="false">[</mo><mi mathvariant="normal">X</mi><mo stretchy="false">]</mo></mrow><mtext>eq</mtext></msub>
+              <mo>)</mo>
+            </mrow>
+            <mo>≥</mo><mn>0</mn>
+          </mrow>
+        </math>
+      </div>
+      <ul class="dl">
+        <li><span class="y">[X]</span><span class="t">Concentration of species X in the driven state, in mol L⁻¹. The sum runs over the species of the driven system, for example the co-conformations of a rotaxane or the reactants and products of a driven reaction.</span></li>
+        <li><span class="y">[X]<sub>eq</sub></span><span class="t">Its concentration at the reference equilibrium: usually the state the same system relaxes to when the driving is switched off, with the same total amount of each building block (see “Which equilibrium?” below for other choices).</span></li>
+        <li><span class="y">RT</span><span class="t">Gas constant times temperature: 2.48 kJ mol⁻¹ at 25 °C.</span></li>
+        <li><span class="y">G − G<sub>eq</sub></span><span class="t">Free energy of the driven mixture minus that of the equilibrium mixture, per unit volume (J L⁻¹). It is zero at equilibrium and positive for any other state with the same total amount of each building block. At constant temperature and pressure it is the most work that could be extracted as the system relaxes, and the least work needed to bring it there from equilibrium; holding a state steady costs extra, continuous dissipation. It describes the whole mixture; a reaction Gibbs energy, Δ<sub>r</sub>G (kJ mol⁻¹), describes one reaction.</span></li>
+      </ul>
+    </div>
+
+    <div class="tools three keep">
+      <div class="tool">
+        <span class="n">Before you compute · 1</span>
+        <h3>Which equilibrium?</h3>
+        <p>The number depends on which equilibrium you compare with. Papers in the list use thermal equilibrium in the dark, a “local” equilibrium in which the ratio of photoisomers is kept fixed, or the equilibrium reached once the fuel has been converted to waste. Each answers a slightly different question. When fuel and waste are held at fixed concentrations (chemostatted), they are left out of the sum, and the reference is the equilibrium the system would reach if fuel and waste were at equilibrium with each other; the quantity is then a transformed, or semigrand, free energy (Rao and Esposito 2016; Penocchio et al. 2019). In batch experiments, where the fuel is used up, the reference is the equilibrium reached once it has been converted to waste.</p>
+      </div>
+      <div class="tool">
+        <span class="n">Before you compute · 2</span>
+        <h3>Dilute solutions</h3>
+        <p>The expression uses concentrations in place of activities. That is usually fine at millimolar concentrations, but with strong interactions, high concentrations or many charges an extra term from the interactions between species appears, and the ideal expression is only an approximation (<a href="https://doi.org/10.1063/5.0041225" target="_blank" rel="noopener">Avanzini et al. 2021</a>).</p>
+      </div>
+      <div class="tool">
+        <span class="n">Before you compute · 3</span>
+        <h3>Per litre or per mole</h3>
+        <p>The stored free energy is an amount per litre, so it grows with concentration. Dividing by the concentration of the machine or of the driven reactants gives kJ mol⁻¹. For unimolecular processes, such as shuttling or isomerisation, this removes the concentration dependence; for bimolecular ones, such as binding or synthesis, the equilibrium itself depends on concentration and the choice of normalising concentration is partly arbitrary. In compartmentalised systems the value also depends on the volume it refers to. Dividing by the free energy supplied by the fuel or the light gives an efficiency. For these reasons the list gives the conditions with every value.</p>
+      </div>
+    </div>
+
+    <div class="demo calc" id="calc">
+      <div class="calc-intro">
+        <h3>Try it</h3>
+        <p>Enter the concentration of each species in the driven state and at equilibrium, in mM. The example is an isomerisation A ⇌ B, 10 mM in total, that is held at 1 : 9 while its equilibrium is 9 : 1.</p>
+        <table class="calc-table">
+          <thead><tr><th scope="col">Species</th><th scope="col">Driven state [X], mM</th><th scope="col">Equilibrium [X]<sub>eq</sub>, mM</th><th scope="col"><span class="visually-hidden">Remove</span></th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <div class="demo-actions">
+          <button type="button" class="btn btn-ghost" data-calc="add">Add a species</button>
+          <button type="button" class="btn btn-ghost" data-calc="reset">Back to the example</button>
+        </div>
+        <label class="calc-t" for="calc-t">Temperature (K) <input id="calc-t" type="number" min="1" step="any" inputmode="decimal" value="298.15"></label>
+      </div>
+      <div class="calc-res">
+        <div class="demo-readout"><span>Stored free energy</span><output id="calc-out" for="calc-t" aria-live="polite">–</output><span class="sub">Per mole of all listed species in the driven state: <output id="calc-mol">–</output></span><span class="sub" id="calc-tot"></span></div>
+        <p class="demo-note" id="calc-note"></p>
+        <ul class="calc-bars" id="calc-bars" aria-label="Contribution of each species, J per litre"></ul>
+        <p class="demo-note">Both columns must describe the same system, with the same total amount of each building block. For reactions that change the number of molecules, divide by the concentration that suits your system rather than using the per-mole value above. The calculation runs in your browser; nothing is sent anywhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="roots">
+  <div class="wrap split">
+    <div class="left stack sticky">
+      <h2 class="h2">Where the expression comes from</h2>
+      <p class="lead">The quantity is not new. What is new is that experimental chemists now report it for their own systems.</p>
+    </div>
+    <div class="right">
+      <div class="prose"><p>The idea that a system away from equilibrium holds energy that could be turned into work goes back to the founders of thermodynamics. For a mixture of reacting species, the free energy measured from equilibrium takes the form of a relative entropy between the actual and the equilibrium concentrations. Shear (1967) proposed it as a Lyapunov function for mass-action reaction networks, a chemical analogue of Boltzmann’s H-theorem. It is one for closed networks that satisfy detailed balance, but not in general for open ones (Higgins 1968), and Horn and Jackson (1972) proved that it is one for the wider class of complex-balanced networks. Hill (1977) is a standard reference for free-energy transduction and efficiency in biochemical cycles, and Qian (2001) identified relative entropy with the free energy of nonequilibrium deviations.</p>
+        <p>That the excess free energy of a nonequilibrium distribution bounds the work it can deliver was recognised in statistical mechanics (Procaccia and Levine 1976). Stochastic thermodynamics, formulated for chemical reaction networks by Schmiedl and Seifert (2007), made it precise as the least work needed to create a nonequilibrium state and the most work it can deliver (Esposito and Van den Broeck 2011), and Sivak and Crooks (2012) showed how it can be measured. Rao and Esposito (2016) carried this over to open chemical reaction networks described by concentrations.</p>
+        <p>Our own papers apply the framework to fuel- and light-driven reactions (2019, 2021) and to non-ideal solutions (2021), and a tutorial review written with Giulio Ragazzon and co-workers (2023) works through examples from experiments.</p></div>
+      <ul class="reading refs mt"><li><span class="lvl">Roots</span><div><a class="t" href="https://doi.org/10.1016/0022-5193(67)90005-7" target="_blank" rel="noopener">An analog of the Boltzmann H-theorem (a Liapunov function) for systems of coupled chemical reactions</a><div class="m">D. Shear · J. Theor. Biol. 16, 212–228 (1967)</div></div></li><li><span class="lvl">Roots</span><div><a class="t" href="https://doi.org/10.1016/0022-5193(68)90117-3" target="_blank" rel="noopener">Some remarks on Shear’s Liapunov function for systems of chemical reactions</a><div class="m">J. Higgins · J. Theor. Biol. 21, 293–304 (1968)</div></div></li><li><span class="lvl">Roots</span><div><a class="t" href="https://doi.org/10.1007/BF00251225" target="_blank" rel="noopener">General mass action kinetics</a><div class="m">F. Horn, R. Jackson · Arch. Ration. Mech. Anal. 47, 81–116 (1972)</div></div></li><li><span class="lvl">Roots</span><div><a class="t" href="https://doi.org/10.1063/1.433482" target="_blank" rel="noopener">Potential work: a statistical-mechanical approach for systems in disequilibrium</a><div class="m">I. Procaccia, R. D. Levine · J. Chem. Phys. 65, 3357–3364 (1976)</div></div></li><li><span class="lvl">Roots</span><div><a class="t" href="https://shop.elsevier.com/books/free-energy-transduction-in-biology/hill/978-0-12-348250-1" target="_blank" rel="noopener">Free energy transduction in biology: the steady-state kinetic and thermodynamic formalism</a><div class="m">T. L. Hill · Academic Press, New York (1977)</div></div></li><li><span class="lvl">Roots</span><div><a class="t" href="https://doi.org/10.1103/PhysRevE.63.042103" target="_blank" rel="noopener">Relative entropy: free energy associated with equilibrium fluctuations and nonequilibrium deviations</a><div class="m">H. Qian · Phys. Rev. E 63, 042103 (2001)</div></div></li><li><span class="lvl">Framework</span><div><a class="t" href="https://doi.org/10.1063/1.2428297" target="_blank" rel="noopener">Stochastic thermodynamics of chemical reaction networks</a><div class="m">T. Schmiedl, U. Seifert · J. Chem. Phys. 126, 044101 (2007)</div></div></li><li><span class="lvl">Framework</span><div><a class="t" href="https://doi.org/10.1209/0295-5075/95/40004" target="_blank" rel="noopener">Second law and Landauer principle far from equilibrium</a><div class="m">M. Esposito, C. Van den Broeck · EPL 95, 40004 (2011)</div></div></li><li><span class="lvl">Framework</span><div><a class="t" href="https://doi.org/10.1103/PhysRevLett.108.150601" target="_blank" rel="noopener">Near-equilibrium measurements of nonequilibrium free energy</a><div class="m">D. A. Sivak, G. E. Crooks · Phys. Rev. Lett. 108, 150601 (2012)</div></div></li><li><span class="lvl">Framework</span><div><a class="t" href="https://doi.org/10.1103/PhysRevX.6.041064" target="_blank" rel="noopener">Nonequilibrium thermodynamics of chemical reaction networks: wisdom from stochastic thermodynamics</a><div class="m">R. Rao, M. Esposito · Phys. Rev. X 6, 041064 (2016)</div></div></li><li><span class="lvl">Our work</span><div><a class="t" href="https://doi.org/10.1038/s41467-019-11676-x" target="_blank" rel="noopener">Thermodynamic efficiency in dissipative chemistry</a><div class="m">E. Penocchio, R. Rao, M. Esposito · Nat. Commun. 10, 3865 (2019)</div></div></li><li><span class="lvl">Our work</span><div><a class="t" href="https://doi.org/10.1063/5.0060774" target="_blank" rel="noopener">Nonequilibrium thermodynamics of light-induced reactions</a><div class="m">E. Penocchio, R. Rao, M. Esposito · J. Chem. Phys. 155, 114101 (2021)</div></div></li><li><span class="lvl">Our work</span><div><a class="t" href="https://doi.org/10.1063/5.0041225" target="_blank" rel="noopener">Nonequilibrium thermodynamics of non-ideal chemical reaction networks</a><div class="m">F. Avanzini, E. Penocchio, G. Falasco, M. Esposito · J. Chem. Phys. 154, 094114 (2021)</div></div></li><li><span class="lvl">Our work</span><div><a class="t" href="https://doi.org/10.1002/anie.202309501" target="_blank" rel="noopener">Artificial molecular ratchets: tools enabling endergonic processes</a><div class="m">T. Sangchai, S. Al Shehimy, E. Penocchio, G. Ragazzon · Angew. Chem. Int. Ed. 62, e202309501 (2023)</div></div></li></ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="callout">
+      <h3>Missing a paper? Spotted a mistake?</h3>
+      <div><p>This list is surely incomplete. If you have reported a stored free energy, or an efficiency built on it, or if we have described your work inaccurately, please write to <a href="mailto:emanuele.penocchio@uni-mainz.de">emanuele.penocchio@uni-mainz.de</a> and we will update the page. Questions about the calculation are welcome.</p><p class="updated">Last updated: October 2026.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div class="c1">
+        <a class="brand" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 30 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M1 18 L11 3 V18 L21 3 V18 L29 6"/></svg>
+          <span class="brand-text"><b>Penocchio</b><span>Research Group</span></span>
+        </a>
+        <address>Department of Chemistry<br>Johannes Gutenberg University Mainz<br>Duesbergweg 10–14<br>55128 Mainz, Germany</address>
+      </div>
+      <div class="c2">
+        <span class="lbl">Contact</span>
+        <a href="mailto:emanuele.penocchio@uni-mainz.de">emanuele.penocchio@uni-mainz.de</a>
+        <a href="contact.html">How to reach us</a>
+        <a href="opportunities.html">Opportunities</a>
+        <a href="lab.html">Lab area (members)</a>
+      </div>
+      <div class="c3">
+        <span class="lbl">Follow</span>
+        <a href="https://scholar.google.com/citations?user=w0buCtcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a href="https://orcid.org/0000-0002-1974-1613" target="_blank" rel="noopener">ORCID ↗</a>
+        <a href="https://github.com/emanuelepenocchio" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="c4"><a href="https://www.uni-mainz.de/" target="_blank" rel="noopener" aria-label="Johannes Gutenberg University Mainz (opens in a new tab)"><img class="jgu-foot" src="assets/img/jgu.svg" alt="Johannes Gutenberg Universität Mainz" width="150" height="33"></a></div>
+    </div>
+    <div class="funding">
+      <span>Funded by</span>
+      <span class="wsw"><span class="wsw-word">Wübben Stiftung Wissenschaft</span></span>
+      <span>and Johannes Gutenberg University Mainz</span>
+    </div>
+    <div class="legal">
+      <span>© 2026 Penocchio Research Group · Design by Beatrice Vivaldi</span>
+      <a href="impressum.html">Impressum</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="accessibility.html">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<script src="data/stored-free-energy.js?v=2026-10-26c" defer></script>
+<script src="assets/js/main.js?v=2026-10-26c" defer></script>
+<script src="assets/js/free-energy.js?v=2026-10-26c" defer></script>
+</body>
+</html>
