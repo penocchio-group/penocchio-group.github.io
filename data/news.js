@@ -12,9 +12,16 @@
      text    optional extra sentence (shown on the News page only)
      link    optional URL (internal page or external)
      image   optional path, e.g. "assets/img/news/2026-group.jpg"
-             (square crop, ≥ 300×300). Without it an icon is shown.
+             (square: a photo cropped to ≥ 300×300, or a square SVG
+             drawing). Without it an icon is shown.
    ===================================================================== */
 window.NEWS = [
+  { date: "2026-11", kind: "paper",
+    title: "Our first paper from Mainz: a minimal chemical oscillator that respects thermodynamics, in J. Chem. Phys.",
+    text: "With Benedikt Remlein, Luca Monari, Beatrice Bartolomei, Giulio Ragazzon and Massimiliano Esposito. Three species fed by two chemostats are enough for sustained oscillations, and the onset of oscillations leaves a kink in thermodynamic quantities such as the work needed to keep the system running. Part of the 2026 JCP Emerging Investigators Special Collection.",
+    link: "https://doi.org/10.1063/5.0357883",
+    image: "assets/img/news/2026-11-oscillator.svg" },
+
   { date: "2026-10", kind: "group",
     title: "From November 2026 we are at JGU Mainz, and we are recruiting.",
     text: "On 1 November Emanuele joins the Department of Chemistry at Johannes Gutenberg University Mainz as tenure-track professor and Wübben Foundation Professor for Theoretical Chemistry of Macromolecular and Supramolecular Systems. PhD and postdoc positions are open.",
