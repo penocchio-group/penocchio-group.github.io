@@ -171,6 +171,12 @@
     }
     drawWall(L - 1.5, topL - 10, baseL + 6, -1);
     drawWall(R + 1.5, topL - 10, baseL + 6, 1);
+    // axis labels of the landscape: energy (up) against position (right)
+    ctx.font = (small ? '400 10px ' : '400 12px ') + 'Space Grotesk, system-ui, sans-serif';
+    ctx.fillStyle = C.muted; ctx.textBaseline = 'alphabetic';
+    ctx.textAlign = 'left'; ctx.fillText('↑ energy', L + 6, topL - (small ? 8 : 12));
+    ctx.textAlign = 'right'; ctx.fillText('position →', R - 6, baseL + (small ? 18 : 22));
+    ctx.textAlign = 'left';
 
     // particles (a sample), smoothed on screen so the jiggling is easier to follow
     var a = fresh ? 1 : SMOOTH_DOTS;

@@ -1,6 +1,7 @@
 /* =====================================================================
    NEWS — single source of truth for news.html and the home page
-   ("Latest updates" shows the first 4 entries in this list).
+   ("Latest updates" shows the first 4 entries from the last 12 months;
+   with nothing that recent, the home page hides its news section).
 
    Put the newest item at the TOP. To add one, copy an entry and edit.
 

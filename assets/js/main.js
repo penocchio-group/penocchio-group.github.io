@@ -147,12 +147,28 @@
       (withText && n.text ? '<span class="sub">' + esc(n.text) + '</span>' : '') +
       '</div><time datetime="' + esc(n.date) + '">' + fmtDate(n.date) + '</time></' + tag + '>';
   }
+  // months since a news date ("YYYY-MM", or "YYYY", read as mid-year)
+  function ageInMonths(d) {
+    var p = String(d).split('-');
+    var y = parseInt(p[0], 10), m = p.length > 1 ? parseInt(p[1], 10) : 7;
+    var now = new Date();
+    return (now.getFullYear() - y) * 12 + (now.getMonth() + 1 - m);
+  }
   document.querySelectorAll('[data-news]').forEach(function (el) {
     if (!window.NEWS) return;
     var limit = parseInt(el.getAttribute('data-news'), 10) || window.NEWS.length;
     var withText = el.hasAttribute('data-news-text');
     var kind = el.getAttribute('data-news-kind');
-    var items = window.NEWS.filter(function (n) { return !kind || n.kind === kind; }).slice(0, limit);
+    // data-news-recent="12": show only items from the last 12 months, and hide
+    // the whole section when there are none, so a quiet year does not look stale
+    var recent = parseInt(el.getAttribute('data-news-recent'), 10);
+    var items = window.NEWS.filter(function (n) {
+      return (!kind || n.kind === kind) && (!recent || ageInMonths(n.date) <= recent);
+    }).slice(0, limit);
+    if (!items.length && recent) {
+      var sec = el.closest('section'); if (sec) sec.hidden = true;
+      return;
+    }
     el.innerHTML = items.map(function (n) { return newsRow(n, withText); }).join('');
   });
 
@@ -194,8 +210,12 @@
     var right = link ? '<a class="doi" href="' + esc(link) + '" target="_blank" rel="noopener" aria-label="Open paper: ' + esc(p.title) + '">' + (p.doi ? 'DOI ↗' : 'Link ↗') + '</a>' : '<span></span>';
     var yearCell = (opts && opts.noYear) ? '' : '<span class="y">' + p.year + '</span>';
     if (opts && opts.numCol) yearCell = '<span class="num">' + (p.num ? p.num : '') + '</span>' + yearCell;
-    return '<li>' + yearCell + '<div>' + title + badge + '<div class="m">' + meta + '</div>' +
-      (p.note && !(opts && opts.compact) ? '<div class="note">' + esc(p.note) + '</div>' : '') + '</div>' + right + '</li>';
+    var body = title + badge + '<div class="m">' + meta + '</div>' +
+      (p.note && !(opts && opts.compact) ? '<div class="note">' + esc(p.note) + '</div>' : '');
+    if (p.image) {
+      body = '<div class="pub-fig"><img src="' + esc(p.image) + '" alt="' + esc(p.imageAlt || '') + '" width="160" height="120" loading="lazy" decoding="async"><div>' + body + '</div></div>';
+    }
+    return '<li>' + yearCell + '<div>' + body + '</div>' + right + '</li>';
   }
   var featured = document.getElementById('featured-pubs');
   if (featured && window.PUBLICATIONS) {

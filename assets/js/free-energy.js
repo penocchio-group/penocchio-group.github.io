@@ -29,6 +29,10 @@
       '<li class="lab">Lab: ' + esc(p.labs) + '</li>' +
       (p.coauthored ? '<li class="co">Co-author: E. Penocchio</li>' : '') + '</ul>';
     var what = p.quantified ? '<p class="sfe-what">' + p.quantified + '</p>' : '';
+    if (p.jpl) {
+      what = '<p class="sfe-jpl"><span class="v">' + esc(p.jpl) + ' J L⁻¹</span>' +
+        '<span class="how">' + (p.jplFrom === 'reported' ? 'as reported' : 'our conversion: ' + esc(p.jplFrom)) + '</span></p>' + what;
+    }
     var right = link
       ? '<a class="doi" href="' + esc(link) + '" target="_blank" rel="noopener" aria-label="Open paper: ' + esc(p.title) + '">' + (p.doi ? 'DOI ↗' : 'Link ↗') + '</a>'
       : '<span></span>';

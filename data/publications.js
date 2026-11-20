@@ -8,7 +8,8 @@
    Fields
      year      number
      authors   string, "Initial. Surname" separated by commas.
-               Mark corresponding authors with * right after the name.
+               Write "E. Penocchio*" when Emanuele is a corresponding
+               author. Other corresponding authors are not marked.
                "E. Penocchio" is highlighted automatically.
      title     string
      journal   string (italicised on the page)
@@ -20,6 +21,11 @@
                "simulation", "structure"
      note      optional one-liner (highlights, press)
      featured  true → appears in "Selected papers" on the home page
+     image     optional picture shown next to the paper (home page and
+               publications page), 4:3, about 320 × 240 px. Use our own
+               artwork or figures we may reuse (e.g. CC BY); publishers
+               often hold the rights to graphical abstracts.
+     imageAlt  short description of the picture
    ===================================================================== */
 window.PUB_TOPICS = {
   thermo:     "Nonequilibrium thermodynamics",
@@ -46,14 +52,14 @@ window.PUBLICATIONS = [
     topics: ["thermo"] },
 
   { year: 2026, type: "article",
-    authors: "J. M. Gallagher, E. Penocchio*, R. G. Bergman, F. D. Toste*",
+    authors: "J. M. Gallagher, E. Penocchio*, R. G. Bergman, F. D. Toste",
     title: "Conformational dynamics for catalysis beyond the Sabatier limit",
     journal: "J. Am. Chem. Soc.", details: "148, 39417–39432",
     doi: "10.1021/jacs.6c11246",
     topics: ["catalysis"] },
 
   { year: 2026, type: "article",
-    authors: "W. Baxter, L. E. Bickerton, K. Liang, E. Penocchio, J. A. Aguilar, G. Ragazzon*, S. Borsley*",
+    authors: "W. Baxter, L. E. Bickerton, K. Liang, E. Penocchio, J. A. Aguilar, G. Ragazzon, S. Borsley",
     title: "Chemically fueled active transport cascades in large unilamellar vesicles",
     journal: "J. Am. Chem. Soc.", details: "148, 39976–39987",
     doi: "10.1021/jacs.6c11418",
@@ -74,7 +80,7 @@ window.PUBLICATIONS = [
     topics: ["thermo", "light", "machines"] },
 
   { year: 2025, type: "article",
-    authors: "B. M. W. Roberts, E. Del Grosso, E. Penocchio, F. Ricci*, L. J. Prins*",
+    authors: "B. M. W. Roberts, E. Del Grosso, E. Penocchio, F. Ricci, L. J. Prins",
     title: "An information ratchet improves selectivity in molecular recognition under non-equilibrium conditions",
     journal: "Nat. Nanotechnol.", details: "20, 1449–1456",
     doi: "10.1038/s41565-025-01982-5",
@@ -82,31 +88,33 @@ window.PUBLICATIONS = [
     topics: ["machines", "thermo"] },
 
   { year: 2025, type: "article",
-    authors: "K. Liang, F. Nicoli, S. Al Shehimy, E. Penocchio, S. Di Noja, Y. Li, C. Bonfio, S. Borsley, G. Ragazzon*",
+    authors: "K. Liang, F. Nicoli, S. Al Shehimy, E. Penocchio, S. Di Noja, Y. Li, C. Bonfio, S. Borsley, G. Ragazzon",
     title: "Catalysis-driven active transport across a liquid membrane",
     journal: "Angew. Chem. Int. Ed.", details: "64, e202421234",
     doi: "10.1002/anie.202421234",
     topics: ["machines", "catalysis"] },
 
   { year: 2025, type: "article", featured: true,
-    authors: "E. Penocchio*, G. Gu, A. Albaugh, T. R. Gingrich*",
+    authors: "E. Penocchio*, G. Gu, A. Albaugh, T. R. Gingrich",
     title: "Power strokes in molecular motors: predictive, irrelevant, or somewhere in between?",
     journal: "J. Am. Chem. Soc.", details: "147, 1063–1073",
     doi: "10.1021/jacs.4c14481",
+    image: "assets/img/papers/power-strokes.jpg", imageAlt: "Snapshot of a coarse-grained catenane motor simulation, with fuel molecules around it",
     topics: ["machines", "simulation"] },
 
   { year: 2025, type: "article",
-    authors: "Z. Yang, X. Wang, E. Penocchio*, G. Ragazzon*, X. Chen, S. Lu, Y. Zhou, K. Fu, Z. Liu, Y. Cai, X. Yu*, X. Li, X. Li*, W. Feng, L. Yuan*",
+    authors: "Z. Yang, X. Wang, E. Penocchio*, G. Ragazzon, X. Chen, S. Lu, Y. Zhou, K. Fu, Z. Liu, Y. Cai, X. Yu, X. Li, X. Li, W. Feng, L. Yuan",
     title: "Beyond single-cycle autonomous molecular machines: light-powered shuttling in a multi-cycle reaction network",
     journal: "Angew. Chem. Int. Ed.", details: "64, e202414072",
     doi: "10.1002/anie.202414072",
     topics: ["machines", "light"] },
 
   { year: 2024, type: "article", featured: true,
-    authors: "E. Penocchio*, A. Bachir, A. Credi, R. D. Astumian*, G. Ragazzon*",
+    authors: "E. Penocchio*, A. Bachir, A. Credi, R. D. Astumian, G. Ragazzon",
     title: "Analysis of kinetic asymmetry in a multi-cycle reaction network establishes the principles for autonomous compartmentalized molecular ratchets",
     journal: "Chem", details: "10, 3644–3655",
     doi: "10.1016/j.chempr.2024.07.038",
+    image: "assets/img/papers/multicycle-ratchet.svg", imageAlt: "Sketch: two coupled reaction cycles across a membrane, with cargo accumulating on one side",
     note: "Highlighted by a Preview in Chem and by ChemistryViews",
     topics: ["machines", "thermo"] },
 
@@ -119,7 +127,7 @@ window.PUBLICATIONS = [
     topics: ["thermo"] },
 
   { year: 2023, type: "review",
-    authors: "T. Sangchai, S. Al Shehimy, E. Penocchio*, G. Ragazzon*",
+    authors: "T. Sangchai, S. Al Shehimy, E. Penocchio*, G. Ragazzon",
     title: "Artificial molecular ratchets: tools enabling endergonic processes",
     journal: "Angew. Chem. Int. Ed.", details: "62, e202309501",
     doi: "10.1002/anie.202309501",
@@ -127,7 +135,7 @@ window.PUBLICATIONS = [
     topics: ["machines", "thermo"] },
 
   { year: 2023, type: "article",
-    authors: "L. Binks, S. Borsley, T. R. Gingrich, D. A. Leigh*, E. Penocchio, B. M. W. Roberts",
+    authors: "L. Binks, S. Borsley, T. R. Gingrich, D. A. Leigh, E. Penocchio, B. M. W. Roberts",
     title: "The role of kinetic asymmetry and power strokes in an information ratchet",
     journal: "Chem", details: "9, 2902–2917",
     doi: "10.1016/j.chempr.2023.05.035",
@@ -142,14 +150,14 @@ window.PUBLICATIONS = [
     topics: ["machines", "thermo"] },
 
   { year: 2023, type: "article",
-    authors: "E. Penocchio*, G. Ragazzon*",
+    authors: "E. Penocchio*, G. Ragazzon",
     title: "Kinetic barrier diagrams to visualize and engineer molecular nonequilibrium systems",
     journal: "Small", details: "19, 2206188",
     doi: "10.1002/smll.202206188",
     topics: ["machines", "thermo"] },
 
   { year: 2022, type: "article",
-    authors: "S. Amano, M. Esposito, E. Kreidt, D. A. Leigh*, E. Penocchio*, B. M. W. Roberts",
+    authors: "S. Amano, M. Esposito, E. Kreidt, D. A. Leigh, E. Penocchio*, B. M. W. Roberts",
     title: "Using catalysis to drive chemistry away from equilibrium: relating kinetic asymmetry, power strokes, and the Curtin–Hammett principle in Brownian ratchets",
     journal: "J. Am. Chem. Soc.", details: "144, 20153–20164",
     doi: "10.1021/jacs.2c08723",
@@ -164,7 +172,7 @@ window.PUBLICATIONS = [
     topics: ["thermo"] },
 
   { year: 2022, type: "article",
-    authors: "S. Corrà, M. Tranfić Bakić, J. Groppi, M. Baroncini, S. Silvi, E. Penocchio, M. Esposito, A. Credi*",
+    authors: "S. Corrà, M. Tranfić Bakić, J. Groppi, M. Baroncini, S. Silvi, E. Penocchio, M. Esposito, A. Credi",
     title: "Kinetic and energetic insights into the dissipative non-equilibrium operation of an autonomous light-powered supramolecular pump",
     journal: "Nat. Nanotechnol.", details: "17, 746–751",
     doi: "10.1038/s41565-022-01151-y",
@@ -172,17 +180,18 @@ window.PUBLICATIONS = [
     topics: ["machines", "light", "thermo"] },
 
   { year: 2022, type: "article",
-    authors: "D. Asnicar, E. Penocchio, D. Frezzato*",
+    authors: "D. Asnicar, E. Penocchio, D. Frezzato",
     title: "Sample size dependence of tagged molecule dynamics in steady-state networks with bimolecular reactions: cycle times of a light-driven pump",
     journal: "J. Chem. Phys.", details: "156, 184116",
     doi: "10.1063/5.0089695",
     topics: ["light", "machines"] },
 
   { year: 2022, type: "article", featured: true,
-    authors: "S. Amano, M. Esposito, E. Kreidt, D. A. Leigh*, E. Penocchio*, B. M. W. Roberts",
+    authors: "S. Amano, M. Esposito, E. Kreidt, D. A. Leigh, E. Penocchio*, B. M. W. Roberts",
     title: "Insights from an information thermodynamics analysis of a synthetic molecular motor",
     journal: "Nat. Chem.", details: "14, 530–537",
     doi: "10.1038/s41557-022-00899-z",
+    image: "assets/img/papers/motor-information.svg", imageAlt: "Sketch: a small ring moving around a larger ring between two binding sites, driven by fuel",
     note: "Authors in alphabetical order",
     topics: ["machines", "thermo"] },
 
@@ -194,29 +203,30 @@ window.PUBLICATIONS = [
     topics: ["thermo", "light"] },
 
   { year: 2021, type: "article",
-    authors: "F. Avanzini*, E. Penocchio, G. Falasco, M. Esposito",
+    authors: "F. Avanzini, E. Penocchio, G. Falasco, M. Esposito",
     title: "Nonequilibrium thermodynamics of non-ideal chemical reaction networks",
     journal: "J. Chem. Phys.", details: "154, 094114",
     doi: "10.1063/5.0041225",
     topics: ["thermo"] },
 
   { year: 2019, type: "article", featured: true,
-    authors: "E. Penocchio, R. Rao, M. Esposito*",
+    authors: "E. Penocchio, R. Rao, M. Esposito",
     title: "Thermodynamic efficiency in dissipative chemistry",
     journal: "Nat. Commun.", details: "10, 3865",
     doi: "10.1038/s41467-019-11676-x",
+    image: "assets/img/papers/efficiency.svg", imageAlt: "Sketch: free energy from a fuel enters a chemical system; part is used, the rest dissipated",
     note: "Covered by Phys.org",
     topics: ["thermo"] },
 
   { year: 2019, type: "article",
-    authors: "A. Sabatino, E. Penocchio, G. Ragazzon, A. Credi*, D. Frezzato*",
+    authors: "A. Sabatino, E. Penocchio, G. Ragazzon, A. Credi, D. Frezzato",
     title: "Individual-molecule perspective analysis of chemical reaction networks: the case of a light-driven supramolecular pump",
     journal: "Angew. Chem. Int. Ed.", details: "58, 14341–14348",
     doi: "10.1002/anie.201908026",
     topics: ["light", "machines"] },
 
   { year: 2019, type: "article",
-    authors: "G. Falasco*, T. Cossetto, E. Penocchio, M. Esposito",
+    authors: "G. Falasco, T. Cossetto, E. Penocchio, M. Esposito",
     title: "Negative differential response in chemical reactions",
     journal: "New J. Phys.", details: "21, 073005",
     doi: "10.1088/1367-2630/ab28be",
@@ -237,28 +247,28 @@ window.PUBLICATIONS = [
     topics: ["structure"] },
 
   { year: 2015, type: "article",
-    authors: "E. Penocchio, M. Piccardo, V. Barone*",
+    authors: "E. Penocchio, M. Piccardo, V. Barone",
     title: "Semiexperimental equilibrium structures for building blocks of organic and biological molecules: the B2PLYP route",
     journal: "J. Chem. Theory Comput.", details: "11, 4689–4707",
     doi: "10.1021/acs.jctc.5b00622",
     topics: ["structure"] },
 
   { year: 2015, type: "article",
-    authors: "V. Barone*, M. Biczysko, J. Bloino, P. Cimino, E. Penocchio, C. Puzzarini",
+    authors: "V. Barone, M. Biczysko, J. Bloino, P. Cimino, E. Penocchio, C. Puzzarini",
     title: "CC/DFT route toward accurate structures and spectroscopic features for observed and elusive conformers of flexible molecules: pyruvic acid as a case study",
     journal: "J. Chem. Theory Comput.", details: "11, 4342–4363",
     doi: "10.1021/acs.jctc.5b00580",
     topics: ["structure"] },
 
   { year: 2015, type: "article",
-    authors: "M. Piccardo, E. Penocchio, C. Puzzarini, M. Biczysko, V. Barone*",
+    authors: "M. Piccardo, E. Penocchio, C. Puzzarini, M. Biczysko, V. Barone",
     title: "Semi-experimental equilibrium structure determinations by employing B3LYP/SNSD anharmonic force fields: validation and application to semirigid organic molecules",
     journal: "J. Phys. Chem. A", details: "119, 2058–2082",
     doi: "10.1021/jp511432m",
     topics: ["structure"] },
 
   { year: 2014, type: "article",
-    authors: "C. Puzzarini*, E. Penocchio, M. Biczysko, V. Barone*",
+    authors: "C. Puzzarini, E. Penocchio, M. Biczysko, V. Barone",
     title: "Molecular structure and spectroscopic signatures of acrolein: theory meets experiment",
     journal: "J. Phys. Chem. A", details: "118, 6648–6656",
     doi: "10.1021/jp503672g",

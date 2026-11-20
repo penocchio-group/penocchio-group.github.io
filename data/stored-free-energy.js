@@ -24,6 +24,10 @@
                 Give values as the paper reports them, conditions, and
                 mark any conversion we made ("about … J L⁻¹").
      coauthored true if Emanuele is a co-author (shown as a tag)
+     jpl        the headline value in J L⁻¹, the unit shared by every entry
+                (string: "0.49", "≈ 8", "≥ 14", "1.5 × 10⁻⁴")
+     jplFrom    "reported" if the paper gives it in J L⁻¹ (or mJ L⁻¹);
+                otherwise how we converted it ("0.63 kJ mol⁻¹ × 12.5 mM")
    ===================================================================== */
 window.SFE_DRIVING = {
   chemical:    "Chemical energy",
@@ -37,6 +41,7 @@ window.SFE_PAPERS = [
     title: "An artificial molecular pump powered by light",
     journal: "Angew. Chem. Int. Ed.", details: "65, e8103353",
     doi: "10.1002/anie.8103353",
+    jpl: "0.012", jplFrom: "reported",
     labs: "Credi",
     driving: "light", source: "369 nm",
     system: "Light-driven molecular pump",
@@ -47,6 +52,7 @@ window.SFE_PAPERS = [
     title: "A versatile strategy for light-driven active transport of ions",
     journal: "Angew. Chem. Int. Ed.", details: "65, e20638",
     doi: "10.1002/anie.202520638",
+    jpl: "0.098", jplFrom: "reported",
     labs: "Ragazzon",
     driving: "light", source: "365 nm and 424 nm",
     system: "Ion transport across a liquid membrane",
@@ -57,16 +63,18 @@ window.SFE_PAPERS = [
     title: "Autonomous migration of a phosphate group along glycerol and inositol scaffolds driven by a phosphodiester reaction cycle",
     journal: "Nat. Chem.", details: "advance online publication",
     doi: "10.1038/s41557-026-02240-4",
+    jpl: "≈ 23", jplFrom: "2.3 kJ mol⁻¹ × 10 mM",
     labs: "von Delius",
     driving: "chemical", source: "carbodiimide (EDC)",
     system: "Phosphate walker on glycerol",
-    quantified: "About <b>2.3 kJ mol⁻¹</b> stored after ten fuelling cycles, when 64 % of the glycerophosphate sits in the less stable middle position (about 10 % at equilibrium; 10 mM)." },
+    quantified: "About <b>2.3 kJ mol⁻¹</b> stored after ten fuelling cycles, when 64 % of the glycerophosphate sits in the less stable middle position (about 10 % at equilibrium; 10 mM): about 23 J L⁻¹ (our conversion, × 10 mM)." },
 
   { year: 2026,
     authors: "W. Baxter, L. E. Bickerton, K. Liang, E. Penocchio, J. A. Aguilar, G. Ragazzon, S. Borsley",
     title: "Chemically fueled active transport cascades in large unilamellar vesicles",
     journal: "J. Am. Chem. Soc.", details: "148, 39976–39987",
     doi: "10.1021/jacs.6c11418",
+    jpl: "1.08", jplFrom: "reported",
     coauthored: true,
     labs: "Borsley, Ragazzon",
     driving: "chemical", source: "carbodiimide (EDC)",
@@ -78,6 +86,7 @@ window.SFE_PAPERS = [
     title: "An information ratchet improves selectivity in molecular recognition under non-equilibrium conditions",
     journal: "Nat. Nanotechnol.", details: "20, 1449–1456",
     doi: "10.1038/s41565-025-01982-5",
+    jpl: "1.5 × 10⁻⁴", jplFrom: "reported",
     coauthored: true,
     labs: "Prins, Ricci",
     driving: "chemical", source: "DNA fuel strand, enzyme-processed",
@@ -89,6 +98,7 @@ window.SFE_PAPERS = [
     title: "Catalysis-driven active transport across a liquid membrane",
     journal: "Angew. Chem. Int. Ed.", details: "64, e202421234",
     doi: "10.1002/anie.202421234",
+    jpl: "≥ 14", jplFrom: "reported",
     coauthored: true,
     labs: "Ragazzon",
     driving: "chemical", source: "carbodiimide (EDC)",
@@ -100,6 +110,7 @@ window.SFE_PAPERS = [
     title: "Progressive endergonic synthesis of Diels–Alder adducts driven by chemical energy",
     journal: "Angew. Chem. Int. Ed.", details: "63, e202411554",
     doi: "10.1002/anie.202411554",
+    jpl: "49", jplFrom: "reported",
     labs: "Ragazzon",
     driving: "chemical", source: "carbodiimide (DIC)",
     system: "Endergonic Diels–Alder synthesis",
@@ -110,6 +121,7 @@ window.SFE_PAPERS = [
     title: "Photoswitchable imines drive dynamic covalent systems to nonequilibrium steady states",
     journal: "J. Am. Chem. Soc.", details: "146, 20720–20727",
     doi: "10.1021/jacs.4c03817",
+    jpl: "44", jplFrom: "reported",
     labs: "Greenfield",
     driving: "light", source: "405 nm",
     system: "Dynamic covalent imine network",
@@ -120,6 +132,7 @@ window.SFE_PAPERS = [
     title: "Endergonic synthesis driven by chemical fuelling",
     journal: "Nat. Synth.", details: "3, 707–714",
     doi: "10.1038/s44160-024-00493-w",
+    jpl: "≈ 8", jplFrom: "0.63 kJ mol⁻¹ × 12.5 mM",
     labs: "Leigh",
     driving: "chemical", source: "carbodiimide (DIC)",
     system: "Endergonic Diels–Alder synthesis",
@@ -130,6 +143,7 @@ window.SFE_PAPERS = [
     title: "Pushing a bistable [2]rotaxane out of equilibrium and isolation of the metastable-state co-conformation",
     journal: "Org. Biomol. Chem.", details: "22, 9203–9208",
     doi: "10.1039/d4ob01419g",
+    jpl: "4.4", jplFrom: "reported",
     labs: "Jeppesen",
     driving: "chemical", source: "redox reagents, one cycle",
     system: "Bistable [2]rotaxane",
@@ -140,6 +154,7 @@ window.SFE_PAPERS = [
     title: "ATP drives the formation of a catalytic hydrazone through an energy ratchet mechanism",
     journal: "Angew. Chem. Int. Ed.", details: "62, e202307530",
     doi: "10.1002/anie.202307530",
+    jpl: "0.49", jplFrom: "reported",
     labs: "Prins",
     driving: "chemical", source: "ATP",
     system: "Energy-ratchet hydrazone synthesis",
@@ -150,6 +165,7 @@ window.SFE_PAPERS = [
     title: "The role of kinetic asymmetry and power strokes in an information ratchet",
     journal: "Chem", details: "9, 2902–2917",
     doi: "10.1016/j.chempr.2023.05.035",
+    jpl: "≈ 3–4", jplFrom: "1.2–1.7 kJ mol⁻¹ × 2.5 mM",
     coauthored: true,
     labs: "Leigh",
     driving: "chemical", source: "carbodiimide (DIC)",
@@ -161,6 +177,7 @@ window.SFE_PAPERS = [
     title: "Kinetic and energetic insights into the dissipative non-equilibrium operation of an autonomous light-powered supramolecular pump",
     journal: "Nat. Nanotechnol.", details: "17, 746–751",
     doi: "10.1038/s41565-022-01151-y",
+    jpl: "0.63", jplFrom: "reported",
     coauthored: true,
     labs: "Credi",
     driving: "light", source: "365 nm",
