@@ -808,7 +808,7 @@ main p,.hero-sub,.page-lead,.faq details > div,.bubble blockquote{text-align:jus
 .sfe-jpl .how{font-size:13px;color:var(--muted)}
 /* publications: pictures for featured papers */
 .pub-fig{display:grid;grid-template-columns:132px minmax(0,1fr);gap:20px;align-items:start}
-.pub-fig img{width:132px;height:99px;object-fit:cover;border-radius:var(--radius);background:#fff;border:1px solid var(--line-soft)}
-@media (max-width:640px){ .pub-fig{grid-template-columns:84px minmax(0,1fr);gap:12px} .pub-fig img{width:84px;height:63px} }
+.pub-fig img{width:132px;height:99px;object-fit:contain;border-radius:var(--radius);background:#fff;border:1px solid var(--line-soft)}
+@media (max-width:640px){ .pub-fig{grid-template-columns:1fr;gap:10px} .pub-fig img{width:120px;height:90px} }
 .pubs li:has(.pub-fig){align-items:start}
 .pubs li:has(.pub-fig) > .y,.pubs li:has(.pub-fig) > .num,.pubs li:has(.pub-fig) > .doi{padding-top:4px}

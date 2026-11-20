@@ -213,7 +213,8 @@
     var body = title + badge + '<div class="m">' + meta + '</div>' +
       (p.note && !(opts && opts.compact) ? '<div class="note">' + esc(p.note) + '</div>' : '');
     if (p.image) {
-      body = '<div class="pub-fig"><img src="' + esc(p.image) + '" alt="' + esc(p.imageAlt || '') + '" width="160" height="120" loading="lazy" decoding="async"><div>' + body + '</div></div>';
+      body = '<div class="pub-fig"><img src="' + esc(p.image) + '" alt="' + esc(p.imageAlt || '') + '"' +
+        (p.imageCredit ? ' title="' + esc(p.imageCredit) + '"' : '') + ' width="160" height="120" loading="lazy" decoding="async"><div>' + body + '</div></div>';
     }
     return '<li>' + yearCell + '<div>' + body + '</div>' + right + '</li>';
   }

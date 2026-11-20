@@ -41,7 +41,7 @@ window.NEWS = [
 
   { date: "2025", kind: "paper",
     title: "An information ratchet that proofreads: nonequilibrium driving improves molecular recognition, in Nature Nanotechnology.",
-    text: "With the Prins and Ricci groups, using DNA hybridisation. Highlighted in a News & Views article.",
+    text: "With Ben Roberts and the Prins group in Padova, using DNA hybridisation. Highlighted in a News & Views article.",
     link: "https://doi.org/10.1038/s41565-025-01982-5" },
 
   { date: "2025", kind: "paper",
